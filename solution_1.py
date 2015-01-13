@@ -8,7 +8,7 @@ numFib = 1
 num1 = 1
 num2 = 1
 
-if index <= 0
+while index <= 0:
 	index = eval(input("Please input a positive integer:\n"))
 
 while index > 2:
