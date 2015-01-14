@@ -5,8 +5,19 @@
 # Week 2 homework
 # Chapter 8, Question 1 solution.
 
-# Prompt for input.
-index = eval(input("What Fibonacci number do you want to find:\n"))
+# Initialize the variable that will hold our input, setting to zero so the while loop executes below.
+index = 0
+
+# Prompt for input, looping until we get a positive integer...
+while index <= 0:
+        try:
+                index = int(input("What Fibonacci number do you want to find:\n"))
+                # ... while testing for non-positive integers...
+                if index <= 0:
+                        print("That's not a POSITIVE INTEGER!  ", end="")
+        # ... and any string input.
+        except ValueError: 
+                print("That's not even a number!  ", end="")
 
 # Initialize variables.  
 # numFib will be used as a place holder in the calculation, but will also hold 
@@ -16,10 +27,6 @@ numFib = 1
 # The first two Fibonacci numbers.  Will also be used in the calculation.
 num1 = 1
 num2 = 1
-
-# Screen input for non-positive integers and re-prompt for input if necessary.
-while index <= 0:
-	index = eval(input("Please input a positive integer:\n"))
 
 # Calculate the Fibonacci number.  Any number less than 3 will be '1', so only 
 # loop for numbers greater than that.
