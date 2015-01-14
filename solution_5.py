@@ -5,18 +5,37 @@
 # Week 2 homework
 # Chapter 8, Question 5 solution.
 
+# We'll need the math library to get a square root and the sys library to immediately quit the script if the number is found to be not prime.
+import math
+import sys
+
 # Initialize the variable that will hold our input, setting to zero so the while loop executes below.
 num = 0
 
 # Prompt for input, looping until we get a positive integer...
-while num <= 0:
+while num <= 2:
 	try:
-		num = int(input("Please enter a positive integer:\n"))
-		# ... while testing for non-positive integers...
-		if num <= 0:
-			print("That's not a POSITIVE INTEGER!  ", end="")
+		num = int(input("Please enter a positive integer greater than two:\n"))
+		# ... while testing for integers less than or equal to two...
+		if num <= 2:
+			print("That's not greater than two!  ", end="")
 	# ... and any string input.
 	except ValueError:
 		print("That's not even a number!  ", end="")
 
+# Set the divisor to be the upper bound of our number range, namely the square root of the number input above.
+divisor = int(math.sqrt(num))
 
+# Loop through our test until our divisor is equal to two...
+while divisor >= 2:
+	#... checking to see if it divides into our input number with no remainder...
+	if num % divisor == 0:
+		#... if it is, output that it is not prime and exit immediately...
+		print("That number is *not* prime!")
+		sys.exit(0)
+	#... otherwise, decrement the divisor by one and loop through the test again.
+	else:
+		divisor -= 1
+
+# If we hit the end of the while loop not having found an divisor that divides with no remainder, the number is prime.  Output that!
+print("That number is prime!")
