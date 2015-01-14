@@ -5,12 +5,25 @@
 # Week 2 homework
 # Chapter 8, Question 4 solution.
 
+num = 0
+
 # Prompt for input.
-num = eval(input("Please enter a positive integer:\n"))
+while num <= 0:
+	try:
+		num = int(input("Please enter a positive integer:\n"))
+		if num <= 0:
+			print("That's not a POSITIVE INTEGER!  ", end="")
+	except ValueError:
+		print("That's not even a number!  ", end="")
+
+
+# Screen input for strings and reprompt if necessary.
+#while isinstance(num, str):
+#	num = input("Please input a POSITIVE integer:\n")
 
 # Screen input for non-positive integers and re-prompt for input if necessary.
-while num <= 0:
-	num = eval(input("Please input a POSITIVE integer:\n"))
+#while num <= 0:
+#	num = int(input("Please input a POSITIVE integer:\n"))
 
 # Output the start of our final output...
 print("Your Syracuse sequence starting with ", num, " is: ", num, sep="", end="")
