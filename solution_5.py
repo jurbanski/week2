@@ -5,7 +5,7 @@
 # Week 2 homework
 # Chapter 8, Question 5 solution.
 
-# We'll need the math library to get a square root and the sys library to immediately quit the script if the number is found to be not prime.
+# We'll need the math module to get a square root and the sys module to immediately quit the script if the number is found to be not prime.
 import math
 import sys
 
