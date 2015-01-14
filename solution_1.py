@@ -11,10 +11,10 @@ index = 0
 # Prompt for input, looping until we get a positive integer...
 while index <= 0:
         try:
-                index = int(input("What Fibonacci number do you want to find:\n"))
+                index = int(input("What Fibonacci number do you want to find?:\n"))
                 # ... while testing for non-positive integers...
                 if index <= 0:
-                        print("That's not a POSITIVE INTEGER!  ", end="")
+                        print("Please enter a positive integer!  ", end="")
         # ... and any string input.
         except ValueError: 
                 print("That's not even a number!  ", end="")
