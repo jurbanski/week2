@@ -14,10 +14,10 @@ while num <= 0:
 		num = int(input("Please enter a positive integer:\n"))
 		# ... while testing for non-positive integers...
 		if num <= 0:
-			print("That's not a POSITIVE INTEGER!  ", end="")
+			print("INVALID INPUT!")
 	# ... and any string input.
 	except ValueError:
-		print("That's not even a number!  ", end="")
+		print("INVALID INPUT!")
 
 # Output the start of our final output...
 print("Your Syracuse sequence starting with ", num, " is: ", num, sep="", end="")
@@ -27,10 +27,10 @@ while num != 1:
 	print(", ", end="")  # Output the sequence separator text first.
 	# If even, divide by two...
 	if num % 2 == 0:
-		num = int(num / 2)
+		num = num // 2
 	# ... if odd, multiply by three and add one.
 	else:
-		num = int(3 * num + 1)
+		num = 3 * num + 1
 	# Output the number in the sequence.
 	print(num, end="")
 

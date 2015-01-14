@@ -14,10 +14,10 @@ while index <= 0:
                 index = int(input("What Fibonacci number do you want to find?:\n"))
                 # ... while testing for non-positive integers...
                 if index <= 0:
-                        print("Please enter a positive integer!  ", end="")
+                        print("INVALID INPUT!")
         # ... and any string input.
         except ValueError: 
-                print("That's not even a number!  ", end="")
+                print("INVALID INPUT!")
 
 # Initialize variables.  
 # numFib will be used as a place holder in the calculation, but will also hold the final output.  Setting this to one allows us to skip the calculation loop for any number less than 3.

@@ -18,10 +18,10 @@ while num <= 2:
 		num = int(input("Please enter a positive integer greater than two:\n"))
 		# ... while testing for integers less than or equal to two...
 		if num <= 2:
-			print("That's not greater than two!  ", end="")
+			print("INVALID INPUT!")
 	# ... and any string input.
 	except ValueError:
-		print("That's not even a number!  ", end="")
+		print("INVALID INPUT!")
 
 # Set the divisor to be the upper bound of our number range, namely the square root of the number input above.
 divisor = int(math.sqrt(num))
