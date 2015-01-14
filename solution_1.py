@@ -20,16 +20,13 @@ while index <= 0:
                 print("That's not even a number!  ", end="")
 
 # Initialize variables.  
-# numFib will be used as a place holder in the calculation, but will also hold 
-# the final output.  Setting this to one allows us to skip the calculation loop
-# for any number less than 3.
+# numFib will be used as a place holder in the calculation, but will also hold the final output.  Setting this to one allows us to skip the calculation loop for any number less than 3.
 numFib = 1
 # The first two Fibonacci numbers.  Will also be used in the calculation.
 num1 = 1
 num2 = 1
 
-# Calculate the Fibonacci number.  Any number less than 3 will be '1', so only 
-# loop for numbers greater than that.
+# Calculate the Fibonacci number.  Any number less than 3 will be '1', so only loop for numbers greater than that.
 while index > 2: 
 	numFib = num1 + num2
 	num1 = num2
